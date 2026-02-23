@@ -1,98 +1,171 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-body{
-    background: linear-gradient(to right, #e0f7fa, #e8f5e9);
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-/* Header */
-header{
-    background:#2b7a78;
-    color:white;
-    text-align:center;
-    padding:40px 20px;
+.container {
+    padding: 80px 10%;
+    text-align: center;
 }
 
-header h1{
-    font-size:32px;
+.section-title {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #2c3e50;
 }
 
-header p{
-    margin-top:10px;
-    font-size:18px;
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Navigation */
-nav{
-    background:#205c5c;
-    text-align:center;
-    padding:12px;
+.nav-links {
+    display: flex;
+    list-style: none;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 20px;
-    font-weight:bold;
-    transition:0.3s;
+.nav-links li {
+    margin-left: 20px;
 }
 
-nav a:hover{
-    color:#ffd166;
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
 }
 
-/* Sections */
-section{
-    max-width:900px;
-    margin:40px auto;
-    padding:20px;
-    background:white;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+/* Hero Section */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
 }
 
-h2{
-    color:#2b7a78;
-    margin-bottom:15px;
-    border-bottom:3px solid #2b7a78;
-    display:inline-block;
-    padding-bottom:5px;
+.highlight {
+    color: #ffd700;
 }
 
-ul{
-    margin-left:20px;
-    margin-top:10px;
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #fff;
+    color: #6e8efb;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-/* Project Cards */
-.project-card{
-    background:#f4f4f4;
-    padding:15px;
-    margin:15px 0;
-    border-radius:8px;
+.btn:hover {
+    background: #2c3e50;
+    color: #fff;
 }
 
-/* Footer */
+/* Grids */
+ .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.skill {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.skill p {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 12px;
+    background: #e5e2e2;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.html { width: 90%; background: #286bb3; }
+.css { width: 85%; background: #286bb3; }
+.js { width: 55%; background: #286bb3; }
+.java { width: 70%; background: #286bb3; }
+.about-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: black;
+}
+.about-content {
+    background-color: #f9f9f9;   
+    border: 1px solid #ddd;       
+    border-radius: 8px;       
+    padding: 30px;                
+    margin: 20px 0;               
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    line-height: 1.6;             
+}
+
+
+.about-text p {
+    color: #333;
+    font-size: 1.1rem;
+    margin: 0;
+}
+.section-title {
+    text-decoration: underline;
+    color: #286bb3;
+    text-underline-offset: 8px; 
+}
 footer{
-    background:#2b7a78;
+    background:#e7aada;
     color:white;
     text-align:center;
     padding:15px;
     margin-top:30px;
 }
 
-/* Responsive */
-@media(max-width:768px){
-    header h1{
-        font-size:24px;
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
     }
-
-    nav a{
-        display:block;
-        margin:10px 0;
+    .nav-links {
+        margin-top: 15px;
     }
 }
